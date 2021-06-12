@@ -11,6 +11,9 @@
 * websockets - config json w/movements and turns
 * win/loose pop up 
 * agregar timer
+* castle
+* check
+* checkmate
 * styling hall
 * styling game chat
 * opciones para coronar
