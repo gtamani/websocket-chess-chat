@@ -7,7 +7,7 @@
 * crear views del hall y del juego :white_check_mark: :white_check_mark:
 * añadir sprites de las piezas y del tablero :white_check_mark: :white_check_mark:
 * javascript drag and drop :white_check_mark: :white_check_mark:
-* movimientos validos :white_check_mark:
+* movimientos validos :white_check_mark: :white_check_mark:
 * websockets - config json w/movements and turns :white_check_mark: :white_check_mark:
 * win/loose pop up 
 * agregar timer :white_check_mark:
@@ -16,7 +16,7 @@
 * checkmate
 * styling hall
 * styling game chat
-* peón al paso
+* peón al paso :white_check_mark: :white_check_mark:
 * pieza protegida :white_check_mark:
 * choque entre reinas :white_check_mark:
 * opciones para coronar :white_check_mark: :white_check_mark:
