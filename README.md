@@ -1,29 +1,38 @@
 # Chess p2p online
 
+
+![asd](https://i.ibb.co/9t9Rqxy/chess.png)
+
+
 ## To do list
 
-* crear conexión websocket con django channels - chat :white_check_mark: :white_check_mark:
-* crear conexión websocket con django channels - game :white_check_mark: :white_check_mark:
-* crear views del hall y del juego :white_check_mark: :white_check_mark:
-* añadir sprites de las piezas y del tablero :white_check_mark: :white_check_mark:
+* create websocket conection w/django channels - chat :white_check_mark: :white_check_mark:
+* create websocket conection w/django channels - game :white_check_mark: :white_check_mark:
+* create hall/game views :white_check_mark: :white_check_mark:
+* add pieces/board sprites :white_check_mark: :white_check_mark:
 * javascript drag and drop :white_check_mark: :white_check_mark:
-* movimientos validos :white_check_mark: :white_check_mark:
+* valid movements :white_check_mark: :white_check_mark:
 * websockets - config json w/movements and turns :white_check_mark: :white_check_mark:
 * win/loose pop up 
-* agregar timer :white_check_mark:
+* add timer :white_check_mark:
 * castle :white_check_mark: :white_check_mark:
 * check :white_check_mark:
 * checkmate
+* Draw - voluntary :white_check_mark: 
+* Draw - 50 movements :white_check_mark: 
+* Draw - repetition x3
+* Draw - drowned
 * styling hall
 * styling game chat
-* peón al paso :white_check_mark: :white_check_mark:
-* pieza protegida :white_check_mark:
-* choque entre reinas :white_check_mark:
-* opciones para coronar :white_check_mark: :white_check_mark:
-* comer piezas :white_check_mark:
-* puntos :white_check_mark: :white_check_mark:
-* BBDD partidas :white_check_mark: 
+* captura al paso :white_check_mark: :white_check_mark:
+* protected piece :white_check_mark:
+* queens colition :white_check_mark:
+* crown options :white_check_mark: :white_check_mark:
+* crown options - frontend
+* eat pieces :white_check_mark:
+* scoring :white_check_mark: :white_check_mark:
+* BBDD games :white_check_mark: 
 * backwards board :white_check_mark: :white_check_mark:
 * armar hall y guests
-* configuración fen 
+* FEN configuration :white_check_mark: :white_check_mark:
 * Production - Deploy to Heroku
