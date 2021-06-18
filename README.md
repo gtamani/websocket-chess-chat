@@ -17,10 +17,10 @@
 * add timer :white_check_mark:
 * castle :white_check_mark: :white_check_mark:
 * check :white_check_mark:
-* checkmate
+* checkmate :white_check_mark: (falta tapar jaque con piezas)
 * Draw - voluntary :white_check_mark: 
 * Draw - 50 movements :white_check_mark: 
-* Draw - repetition x3
+* Draw - repetition x3 :white_check_mark: 
 * Draw - drowned
 * styling hall
 * styling game chat
