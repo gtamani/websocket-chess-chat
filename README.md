@@ -28,11 +28,12 @@
 * protected piece :white_check_mark:
 * queens colition :white_check_mark:
 * crown options :white_check_mark: :white_check_mark:
-* crown options - frontend
+* crown options - frontend :white_check_mark: :white_check_mark:
+* glitch sounds :white_check_mark: :white_check_mark:
 * eat pieces :white_check_mark:
 * scoring :white_check_mark: :white_check_mark:
 * BBDD games :white_check_mark: 
 * backwards board :white_check_mark: :white_check_mark:
 * armar hall y guests
 * FEN configuration :white_check_mark: :white_check_mark:
-* Production - Deploy to Heroku
+* Production - Heroku Configuration :white_check_mark: :white_check_mark:
