@@ -22,8 +22,8 @@
 * Draw - 50 movements :white_check_mark: 
 * Draw - repetition x3 :white_check_mark: 
 * Draw - drowned
-* styling hall
-* styling game chat
+* styling hall :white_check_mark:
+* styling game chat :white_check_mark:
 * captura al paso :white_check_mark: :white_check_mark:
 * protected piece :white_check_mark:
 * queens colition :white_check_mark:
