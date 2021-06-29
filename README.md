@@ -15,6 +15,7 @@
 * websockets - config json w/movements and turns :white_check_mark: :white_check_mark:
 * win/loose pop up 
 * add timer :white_check_mark:
+* password / timer customizable
 * castle :white_check_mark: :white_check_mark:
 * check :white_check_mark:
 * checkmate :white_check_mark: (falta tapar jaque con piezas)

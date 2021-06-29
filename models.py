@@ -1,6 +1,8 @@
 from django.db import models
 
+
 import datetime
+import numpy as np
 
 # Create your models here.
 
@@ -29,3 +31,16 @@ class UsersConnected(models.Model):
 
     def __str__(self):
         return self.nick
+
+class Games(models.Model):
+    hall_name = models.CharField(max_length = 20 )
+    player1 = models.CharField(max_length = 50, default = np.nan )
+    player2 = models.CharField(max_length = 50, default = np.nan )
+    password = models.CharField(max_length = 20 )
+    turn = models.CharField(max_length = 1, default= "w")
+    player1_color = models.CharField(max_length = 1, default= "w")
+    fen = models.CharField(max_length = 60, default= "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1")
+    time = models.IntegerField(default=10)
+    def __str__(self):
+        return f"{self.hall_name} - {self.player1} vs. {self.player2} "
+    
