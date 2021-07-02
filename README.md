@@ -14,8 +14,8 @@
 * valid movements :white_check_mark: :white_check_mark:
 * websockets - config json w/movements and turns :white_check_mark: :white_check_mark:
 * win/loose pop up 
-* add timer :white_check_mark:
-* password / timer customizable
+* add timer :white_check_mark: :white_check_mark: 
+* password / timer customizable :white_check_mark: :white_check_mark:
 * castle :white_check_mark: :white_check_mark:
 * check :white_check_mark: :white_check_mark:
 * checkmate :white_check_mark: :white_check_mark:
@@ -35,6 +35,7 @@
 * scoring :white_check_mark: :white_check_mark:
 * BBDD games :white_check_mark: 
 * backwards board :white_check_mark: :white_check_mark:
-* armar hall y guests
+* armar hall y guests :white_check_mark: 
+* responsive design :white_check_mark: :white_check_mark:
 * FEN configuration :white_check_mark: :white_check_mark:
 * Production - Heroku Configuration :white_check_mark: :white_check_mark:
