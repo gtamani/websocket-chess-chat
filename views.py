@@ -10,51 +10,56 @@ import numpy as np
 # Create your views here.
 
 def chat_hall(request):
-    user_name = request.POST.get("username")
-    new_room_name = request.POST.get("new_roomname")
-    room_name = request.POST.get("roomname")
-    password = request.POST.get("password")
-    time = request.POST.get("time")
-
-    if password:
-        print(password)
-
-    if new_room_name:
-        print(new_room_name)
-
-    if room_name:
-        print(room_name)
-
-    if time:
-        print(time)
-
-    # Create a room
+    device = request.POST.get("device")
     
-
-    if user_name and (room_name or new_room_name):
-        if room_name:
-            hall = room_name if Games.objects.filter(hall_name=room_name) else new_room_name
-        else:
-            hall = new_room_name
-        color = random.choice(["w","b"])
-
-        print("HALL",hall)
-        print(Games.objects.filter(hall_name=room_name))
-
-        new_board = Games(
-            hall_name=hall,
-            player1=user_name,
-            password=password,
-            player1_color = color,
-            time = time,
-            
-            )
+    if device:
+        try:
+            user_name = request.POST.get("username"+device)
+        except:
+            username = None
         
-        new_board.save()
+        try:
+            new_room_name = request.POST.get("new_roomname"+device)
+        except:
+            new_room_name = None
+        
+        room_name = request.POST.get("roomname"+device)
+        password = request.POST.get("password"+device)
+        time = request.POST.get("time"+device)
 
-        print(Games.objects.filter(hall_name=hall))
+        print("AAAAAAAAAAAA",device)
+        print("AAAAAAAAAAAA",user_name)
+        print("AAAAAAAAAAAA",room_name)
+        print("AAAAAAAAAAAA",new_room_name)
 
-        return redirect(f"/chat/{hall}/{user_name}")
+        # Create a room
+        
+
+        if user_name and (room_name or new_room_name):
+            if room_name:
+                hall = room_name if Games.objects.filter(hall_name=room_name) else new_room_name
+            else:
+                hall = new_room_name
+            color = random.choice(["w","b"])
+
+            print("HALL",hall)
+            print(Games.objects.filter(hall_name=room_name))
+
+            new_board = Games(
+                hall_name=hall,
+                player1=user_name,
+                password=password,
+                player1_color = color,
+                time = time,
+                
+                )
+            
+            new_board.save()
+
+            print(Games.objects.filter(hall_name=hall))
+
+            return redirect(f"/chess/{hall}/{user_name}")
+        return render(request,"chat_hall.html")
     return render(request,"chat_hall.html")
 
 def chat_room(request,room_name,user_name):
@@ -107,7 +112,7 @@ def chat_room(request,room_name,user_name):
             })
 
         else:
-            return HttpResponse("ROOM FOOL. ENTER AS A GUEST")
+            return render(request,"room_fool.html")
     else:
         color = random.choice(["w","b"])
         new_board = Games(
@@ -115,12 +120,14 @@ def chat_room(request,room_name,user_name):
             player1=user_name,
             password="",
             player1_color = color,
-            time = 1,
+            time = 10,
+            
             
             )
         
         new_board.save()
         chat_room(request,room_name,user_name)
+        return render(request,"404.html")
         
 
     

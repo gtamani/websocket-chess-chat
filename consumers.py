@@ -1,5 +1,5 @@
 # chat/consumers.py
-import json,threading
+import json,datetime
 from channels.generic.websocket import AsyncWebsocketConsumer
 from asgiref.sync import sync_to_async
 
@@ -47,14 +47,16 @@ class ChatConsumer(AsyncWebsocketConsumer):
         text_data_json = json.loads(text_data)
         print("JSON:",text_data_json)
         if text_data_json["type"] == "message":
-            message = f"{text_data_json['username']}: {text_data_json['message']}"
+            
 
             # Send message to room group
             await self.channel_layer.group_send(
                 self.room_group_name,
                 {
                     'type': 'chat_message',
-                    'message': message
+                    'message': text_data_json['message'],
+                    'username': text_data_json['username'],
+                    'time' : datetime.datetime.now().strftime("%H:%M")
                 }
             )
         elif text_data_json["type"] == "movement":
@@ -104,6 +106,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
                     'type': 'gamefinished',           
                     'winner' : text_data_json["winner"],
                     'reason' : text_data_json["reason"],      
+                    'who' : text_data_json["who"],      
                 }
             )
 
@@ -111,14 +114,14 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def chat_message(self, event):
         print("EVENT: ",event)
         if event["type"] == 'chat_message':
-    
-            message = event['message']
-            
+
 
             # Send message to WebSocket
             await self.send(text_data=json.dumps({
                 'type': 'chat_message',
-                'message': message
+                'message': event['message'],
+                'username' : event['username'],
+                'time' : event['time']
             }))
 
     async def movement(self, event):
@@ -161,6 +164,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 'type': 'gamefinished',
                 'winner' : event["winner"],
                 'reason' : event["reason"],
+                'who' : event["who"],
             }))
 
     
